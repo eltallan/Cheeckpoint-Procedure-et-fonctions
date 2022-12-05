@@ -1,0 +1,45 @@
+PROCEDURE dot_product(produitsacal:INTEGER)
+VAR
+    nomProduct,desc : CHAR;
+    v1,v2,v : INTEGER;
+BEGIN
+    v := 0
+    FOR i FROM 0 TO 2 STEP step  DO
+        v := v + (v1[i]*v2[i])
+    END_FOR
+    Write ("Le produit scalaire de v1 et v2 est" v);
+END
+
+ALGORITHM test vecteur_orthogonaux
+VAR
+    u(A;B), v(C;D) :INTEGER;
+BEGIN
+    Write("Entrer le premier vecteur")
+    Read(A)
+    Write("Entrer le deuxieme vecteur")
+    Read(B)
+    Write("Entrer le troisieme vecteur")
+    Read(C)
+    Write("Entrer le quatrieme vecteur")
+    Read(D)
+    IF (A*C+B*D ==0) THEN
+        Write ("Vecteurs orthogonaux")
+    ELSE
+        Write("Vecteurs non orthogonaux")
+    END_IF
+    dot_product(produitsacal);
+    Write(produitsacal)
+END
+
+FUNCTION dot_product(produitsacal:INTEGER) : return_type
+VAR
+    nomProduct,desc : CHAR;
+    v1,v2,v : INTEGER;
+BEGIN
+    v := 0
+    FOR i FROM 0 TO 2 STEP step  DO
+        v := v + (v1[i]*v2[i])
+    END_FOR
+    Write ("Le produit scalaire de v1 et v2 est" v);
+    RETURN v ;
+END
